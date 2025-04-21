@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | Digital Playbook</title>
+
+  <style>
+    /* Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: 
+        linear-gradient(to bottom right, rgba(79, 172, 254, 0.6), rgba(0, 242, 254, 0.6)),
+        url('/testphoto.jpeg') no-repeat center center;
+      background-size: cover;
+    }
+
+    /* Optional dark overlay for better text contrast */
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    h1 {
+      position: relative;
+      color: Tomato;
+      font-size: 3rem;
+      text-align: center;
+      animation: verticalScroll 10s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    @keyframes verticalScroll {
+      0% { transform: translateY(-100px); }
+      50% { transform: translateY(0); }
+      100% { transform: translateY(-100px); }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to My Digital Playbook</h1>
+</body>
+</html>
+
