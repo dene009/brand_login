@@ -9,11 +9,11 @@
 
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, rgba(79, 172, 254, 0.4), rgba(0, 242, 254, 0.4)),
-                  url('/testphoto.jpeg') no-repeat center center;
+      font-family: 'Georgia', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, serif;
+      background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)),
+                  url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
+      color: #000;
       position: relative;
     }
 
@@ -21,7 +21,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(255, 255, 255, 0.15);
       z-index: -1;
     }
 
@@ -37,9 +37,30 @@
 
     .card {
       background-color: #ffffffcc;
-      border: none;
+      border: 2px solid #007bff;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+    }
+
+    .hero-card-animation {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .btn-filter {
@@ -66,9 +87,13 @@
 <body>
   <!-- Hero Section -->
   <section class="text-center">
-    <h1 class="display-4 fw-bold">Hi, I'm Esidene Alicha</h1>
-    <p class="lead">DevOps | Cloud | Industrial and Systems Engineer</p>
-    <p>Welcome to my digital playbook where I share my projects and learning journey.</p>
+    <div class="container">
+      <div class="card p-4 mx-auto hero-card-animation" style="max-width: 800px;">
+        <h1 class="display-4 fw-bold">Hi, I'm Esidene Alicha</h1>
+        <p class="lead">DevOps | Cloud | Industrial and Systems Engineer</p>
+        <p>Welcome to my digital playbook where I share my projects and learning journey.</p>
+      </div>
+    </div>
   </section>
 
   <!-- About Me -->
