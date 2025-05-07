@@ -1,0 +1,14 @@
+module "eks" {
+  source  = "terraform-aws-modules/eks/aws"
+  # ... your existing cluster config ...
+
+  manage_aws_auth_configmap = true
+
+  aws_auth_users = [
+    {
+      userarn  = "arn:aws:iam::340752824844:user/see-dene"
+      username = "see-dene"
+      groups   = ["system:masters"]
+    }
+  ]
+}
