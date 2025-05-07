@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Esidene Alicha | DevOps, Cloud & ISE Portfolio</title>
+
+  <style>
+    body {
+      font-family: 'Georgia', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, serif;
+      background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)),
+                  url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.15);
+      z-index: -1;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: Tomato;
+    }
+
+    .card {
+      background-color: #ffffffcc;
+      border: 2px solid #007bff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+    }
+
+    .hero-card-animation {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-card {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .btn-filter {
+      margin: 0.5rem;
+    }
+
+    .project-card {
+      display: none;
+    }
+
+    .project-card.show {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #ccc;
+    }
+  </style>
+</head>
+
+      <div class="card p-4 mx-auto hero-card-animation hero-card">
+  <!-- Hero Section -->
+  <section class="text-center">
+      <div class="card p-4 mx-auto hero-card-animation hero-card">
+      <div class="card p-4 mx-auto hero-card-animation" style="max-width: 800px;">
+        <h1 class="display-4 fw-bold">Hi, I'm Esidene Alicha</h1>
+        <p class="lead">DevOps | Cloud | Industrial and Systems Engineer</p>
+        <p>Welcome to my digital playbook where I share my projects and learning journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section class="bg-dark bg-opacity-75 text-white">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="text-center">
+        I'm a multidisciplinary engineer with a background in Industrial & Systems Engineering and a passion for DevOps and Cloud technologies. I enjoy building scalable backend systems, automating deployments, and solving complex systems problems. My current focus is gaining hands-on experience with AWS, Docker, Infrastructure as Code, and CI/CD pipelines.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="bg-light text-dark">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <h4>DevOps Tools</h4>
+          <p>Docker, Jenkins, GitHub Actions, CI/CD, Ansible, Prometheus</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Cloud Platforms</h4>
+          <p>AWS (EC2, S3, Route 53, IAM), CloudFormation, Terraform</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Industrial & Systems Engineering</h4>
+          <p>Work Design & Optimization, Bash, Operations Research, Simulation Modeling, Process Optimization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects with Filters -->
+  <section class="bg-secondary bg-opacity-75 text-white">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="text-center mb-4">
+        <button class="btn btn-outline-light btn-filter" onclick="filterProjects('all')">All</button>
+        <button class="btn btn-outline-light btn-filter" onclick="filterProjects('devops')">DevOps</button>
+        <button class="btn btn-outline-light btn-filter" onclick="filterProjects('cloud')">Cloud</button>
+        <button class="btn btn-outline-light btn-filter" onclick="filterProjects('ise')">ISE</button>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4 project-card devops show">
+          <div class="card p-3">
+            <h5>CI/CD Pipeline with GitHub Actions</h5>
+            <p>Set up an automated pipeline for a Flask app using GitHub Actions and Docker Hub.</p>
+            <a href="#" class="btn btn-sm btn-primary">View on GitHub</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 project-card cloud show">
+          <div class="card p-3">
+            <h5>AWS EC2 Deployment</h5>
+            <p>Deployed a Node.js backend to AWS EC2 with Nginx and PM2 process manager.</p>
+            <a href="#" class="btn btn-sm btn-primary">View Details</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 project-card ise show">
+          <div class="card p-3">
+            <h5>Monitoring & Process Optimization</h5>
+            <p>Used Python and Grafana to monitor server performance and optimize backend workflows.</p>
+            <a href="#" class="btn btn-sm btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="bg-dark bg-opacity-75 text-white text-center">
+    <div class="container">
+      <h2 class="section-title">Let's Discuss</h2>
+      <p>Email: <a href="mailto:ealicha@icloud.com" class="text-info">ealicha@icloud.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/esidene-alicha-2335264b" class="text-info" target="_blank" rel="noopener">Esidene Alicha</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Esidene Alicha. All rights reserved.</p>
+  </footer>
+
+  <!-- Script for Filters -->
+  <script>
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.classList.add('show');
+        } else {
+          card.classList.remove('show');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
